@@ -1,4 +1,18 @@
 <section class="container">
     <br>
-    <table datatable class="dtTables row-border hover table table-bordered table-striped table-hover"></table>
+    <h1>Web-based IP address management solution</h1>
+
+    <div class="form-group">
+        <input type="text" class="form-control" (keypress)="ipAddressOnly($event)" type="text" placeholder="0.0.0.0" >
+        <div *ngS="validateIP" class="alert alert-success" role="alert">
+            Valid
+        </div>
+        <div *ngIf="!validateIP" class="alert alert-danger" role="alert">
+           Invalid
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="form-control primary">
+    </div>
+    <!-- <table datatable class="dtTables row-border hover table table-bordered table-striped table-hover"></table> -->
 </section> 
